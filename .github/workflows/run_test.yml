@@ -22,7 +22,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi  
       - name: create_envfile
         run: |
-          touch .env
+          touch /home/runner/work/pytest_bdd/pytest_bdd/.env
           echo PASSWORD = ${{ vars.PASSWORD }} >> .env
           echo "$PWD"
       - name: Test with pytest  
