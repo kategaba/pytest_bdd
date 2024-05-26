@@ -24,7 +24,7 @@ jobs:
         run: |
           touch .env
           echo PASSWORD = ${{ vars.PASSWORD }} >> .env
-          cat echo pwd
+          echo "$PWD"
       - name: Test with pytest  
         run: |
           pytest  -v -s  
