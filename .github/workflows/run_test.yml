@@ -18,6 +18,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies  
         run: |
+          cd Python3_ROOT_DI
           mkdir pytest_bdd
           cd pytest_bdd
           python -m pip install --upgrade pip  
