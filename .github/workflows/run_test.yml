@@ -22,7 +22,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi  
       - name: create_envfile
         run: |
-          touch Python3_ROOT_DI/.env
+          touch /opt/hostedtoolcache/Python/3.11.9/x64/.env
           echo PASSWORD = ${{ vars.PASSWORD }} >> .env
       - name: Test with pytest  
         run: |
