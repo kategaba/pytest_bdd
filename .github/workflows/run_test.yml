@@ -24,7 +24,6 @@ jobs:
         uses: pytest_bdd
         with:
           PASSWORD: ${{ vars.PASSWORD }}
-          directory: pytest_bdd
           file_name: .env
         # run: |
         #   touch .env
