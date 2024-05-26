@@ -29,4 +29,5 @@ jobs:
           echo PASSWORD = ${{ vars.PASSWORD }} >> .env
       - name: Test with pytest  
         run: |
+          cd pytest_bdd
           pytest  -v -s  
