@@ -18,17 +18,12 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies  
         run: |
-          cd Python3_ROOT_DI
-          mkdir pytest_bdd
-          cd pytest_bdd
           python -m pip install --upgrade pip  
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi  
       - name: create_envfile
         run: |
-          cd pytest_bdd
-          touch .env
+          touch Python3_ROOT_DI/.env
           echo PASSWORD = ${{ vars.PASSWORD }} >> .env
       - name: Test with pytest  
         run: |
-          cd pytest_bdd
           pytest  -v -s  
