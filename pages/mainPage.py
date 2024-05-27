@@ -1,6 +1,9 @@
 from .basePage import BasePage
 from locators import MainPageLocators
 import os
+import dotenv
+
+dotenv.load_dotenv()
 
 class MainPage(BasePage):
     def user_login(self, userType):
