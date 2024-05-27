@@ -30,10 +30,8 @@ All environment related variables are stored in the `.env` file. This file is be
 
 Before you can run tests, you must ensure you have the following in your `.env` file:
 
-```
-
-	PASSWORD = yourPassword
-
+```sh
+PASSWORD = yourPassword
 ```
 
 ## Run the test
