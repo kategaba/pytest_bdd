@@ -20,13 +20,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip  
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi  
-      - name: create_envfile
+      - name: Create env file
         run: |
-          touch /home/runner/work/pytest_bdd/pytest_bdd/.env
+          touch .env
           echo PASSWORD = ${{ vars.PASSWORD }} >> .env
-          echo "$PWD"
-          echo "$(ls -a)"
-          cat .env
       - name: Test with pytest  
         run: |
           pytest  -v -s  
